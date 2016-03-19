@@ -19,7 +19,7 @@ class Pokeman {
         
     }
     
-    var ID : Int {
+    var pokemonId : Int {
         
         return _pokedexId
         
