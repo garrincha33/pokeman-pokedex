@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -62,7 +62,7 @@
                                     <constraint firstItem="D5S-uf-LNE" firstAttribute="centerY" secondItem="7bd-6M-HMK" secondAttribute="centerY" id="yHD-3x-cUS"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="fUq-PX-2IZ">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search For Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="fUq-PX-2IZ">
                                 <rect key="frame" x="0.0" y="42" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -109,6 +109,7 @@
                                         <connections>
                                             <outlet property="nameLbl" destination="7Pb-YP-Ph4" id="RaM-s0-h8J"/>
                                             <outlet property="thumbImg" destination="Wuy-0R-Z6P" id="pZ3-Oq-jJp"/>
+                                            <segue destination="7q7-td-YfG" kind="show" identifier="PokemonDetailVC" id="jmY-Zw-HKp"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -140,11 +141,30 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="Yci-3U-hWI" id="qpj-Rl-5Pk"/>
+                        <outlet property="searchBar" destination="fUq-PX-2IZ" id="Nc5-o8-gIU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-173" y="-446"/>
+            <point key="canvasLocation" x="-1285" y="-852"/>
+        </scene>
+        <!--Pokemon DetailVC-->
+        <scene sceneID="FiE-Gu-ez0">
+            <objects>
+                <viewController id="7q7-td-YfG" customClass="PokemonDetailVC" customModule="pokeman_pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2rD-2x-5L1"/>
+                        <viewControllerLayoutGuide type="bottom" id="QiZ-Qj-yyj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nN6-Oa-v1a" customClass="PokemonDe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.15324851310000001" green="0.45768962959999998" blue="0.74487918639999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azj-EZ-M5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-599" y="-852"/>
         </scene>
     </scenes>
     <resources>
