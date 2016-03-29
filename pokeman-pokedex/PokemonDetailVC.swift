@@ -9,11 +9,17 @@
 import UIKit
 
 class PokemonDetailVC: UIViewController {
+    
+    var pokemon: Pokeman!
 
+    @IBOutlet weak var nameLbl: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        nameLbl.text = pokemon.name
+ 
     }
 
     override func didReceiveMemoryWarning() {
