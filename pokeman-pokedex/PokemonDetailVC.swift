@@ -28,6 +28,13 @@ class PokemonDetailVC: UIViewController {
 
         nameLbl.text = pokemon.name
         mainImg.image = UIImage(named: "\(pokemon.pokemonId)")
+        
+        pokemon.downloadPokemonDetails {
+            
+            () -> () in
+            
+            
+        }
  
     }
 
